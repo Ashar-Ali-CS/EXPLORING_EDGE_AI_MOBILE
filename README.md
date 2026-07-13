@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
@@ -95,3 +96,16 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+=======
+# EXPLORING_EDGE_AI_MOBILE
+
+  A react native app (android tested) 
+
+Early exploration of deploying machine edge AI (on device inference,can work offline) on Android app. 
+
+loaded "out of the box quantisesed model - Qwen0.5-  using react-native-executorch liberary by software mansion
+
+Result show proof-of-concept for on-device LLM inference. Current limitations: model hallucinations, single-turn responses, no chat history yet. 
+
+Future work can  explore loading  differnt more advanced models , altering prompts to get better answers, implementing chat history local storage.
+>>>>>>> e7c6faf3390235363a83f8bea904aed9d931a211
