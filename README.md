@@ -1,111 +1,50 @@
-<<<<<<< HEAD
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Exploring Edge AI Mobile 📱
 
-# Getting Started
+A React Native Android application exploring on-device AI inference using quantized language models.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Overview
 
-## Step 1: Start Metro
+This project investigates the deployment of small Large Language Models (LLMs) directly on mobile devices, enabling offline AI inference without relying on cloud APIs.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+The application uses:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native
+- react-native-executorch
+- ExecuTorch runtime
+- Qwen2.5 0.5B quantized LLM
 
-```sh
-# Using npm
-npm start
+## Current Implementation
 
-# OR using Yarn
-yarn start
-```
+The app successfully loads and runs a quantized Qwen2.5 0.5B model locally on an Android device.
 
-## Step 2: Build and run your app
+Current features:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- ✅ On-device LLM inference
+- ✅ Offline text generation
+- ✅ React Native mobile interface
+- ✅ Model loading and execution through ExecuTorch
 
-### Android
+## Observations
 
-```sh
-# Using npm
-npm run android
+The prototype demonstrates the feasibility of running small language models on mobile hardware.
 
-# OR using Yarn
-yarn android
-```
+Current limitations:
 
-### iOS
+- Small model size results in occasional hallucinations
+- Single-turn generation only
+- No persistent conversation memory
+- Limited prompt optimisation
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## Future Work
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Potential improvements:
 
-```sh
-bundle install
-```
+- Experiment with larger quantized models
+- Implement conversation history using local storage
+- Explore prompt engineering strategies
+- Investigate multimodal edge AI models
+- Build a focused user application around an on-device AI capability
 
-Then, and every time you update your native dependencies, run:
+## Motivation
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-=======
-# EXPLORING_EDGE_AI_MOBILE
-
-  A react native app (android tested) 
-
-Early exploration of deploying machine edge AI (on device inference,can work offline) on Android app. 
-
-loaded "out of the box quantisesed model - Qwen0.5-  using react-native-executorch liberary by software mansion
-
-Result show proof-of-concept for on-device LLM inference. Current limitations: model hallucinations, single-turn responses, no chat history yet. 
-
-Future work can  explore loading  differnt more advanced models , altering prompts to get better answers, implementing chat history local storage.
->>>>>>> e7c6faf3390235363a83f8bea904aed9d931a211
+This project explores the future of private, offline AI applications where users can run AI capabilities directly on their own devices.

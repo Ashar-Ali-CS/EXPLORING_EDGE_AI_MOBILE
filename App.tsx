@@ -59,12 +59,19 @@ const AppContent: React.FC = () => {
 
     try {
 
+      const systemPrompt = `You are AYUB, a concise, offline AI assistant running locally on a mobile device.
+
+      RULES:
+      1. Be extremely concise. Keep answers short and to the point.
+      2. If you do not know the answer, say "I don't know" instead of making up facts.
+      3. You are a text-only assistant. You cannot generate images, draw, or browse the internet.
+      4. Always stay in character as AYUB.`;
+
       const chat: Message[] = [
 
         {
           role: 'system',
-          content:
-            'You are an offline AI assistant called AYUB, running on a mobile phone.',
+          content: systemPrompt,
         },
 
         {
